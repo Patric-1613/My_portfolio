@@ -42,3 +42,30 @@ window.addEventListener('scroll', () => {
         header.style.boxShadow = 'none';
     }
 });
+
+// Resume Modal Logic
+const resumeModal = document.getElementById('resumeModal');
+const resumeTriggers = document.querySelectorAll('.resume-trigger');
+const closeModal = document.querySelector('.close-modal');
+
+resumeTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        resumeModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+});
+
+const closeResumeModal = () => {
+    resumeModal.classList.remove('active');
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+};
+
+closeModal.addEventListener('click', closeResumeModal);
+
+// Close modal on outside click
+resumeModal.addEventListener('click', (e) => {
+    if (e.target === resumeModal) {
+        closeResumeModal();
+    }
+});

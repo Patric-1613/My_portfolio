@@ -31,6 +31,7 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#experience" class="nav-link">Career Paths</a></li>
+                <li><a href="#" class="nav-link resume-trigger">Resume</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <a href="mailto:pmugade2019@gmail.com" class="cta-btn">Hire Me</a>
@@ -49,8 +50,8 @@
                 <a href="#projects" class="btn btn-primary">
                     View My Work <i data-lucide="arrow-right"></i>
                 </a>
-                <a href="#about" class="btn btn-outline">
-                    More About Me
+                <a href="#" class="btn btn-outline resume-trigger">
+                    View Resume <i data-lucide="file-text"></i>
                 </a>
             </div>
             <div class="social-links">
@@ -89,7 +90,7 @@
                         <div class="skill-item"><i data-lucide="database"></i> SQL & Snowflake</div>
                         <div class="skill-item"><i data-lucide="file-code"></i> Python (Pandas/NumPy)</div>
                         <div class="skill-item"><i data-lucide="bar-chart-3"></i> Power BI & Tableau</div>
-                        <div class="skill-item"><i data-lucide="cloud"></i> AWS & Azure</div>
+                        <div class="skill-item"><i data-lucide="cloud"></i> AWS</div>
                         <div class="skill-item"><i data-lucide="workflow"></i> Airflow & dbt</div>
                         <div class="skill-item"><i data-lucide="bot"></i> NLP & LLMs</div>
                     </div>
@@ -109,7 +110,7 @@
                 <!-- Experience 1 -->
                 <div class="project-card fade-up">
                     <div class="project-content">
-                        <span class="tag" style="margin-bottom: 1rem; display: inline-block;">Mar 2025 - Present</span>
+                        <span class="tag" style="margin-bottom: 1rem; display: inline-block;">Mar 2025 - Aug 2025</span>
                         <h3 class="project-title">Research Assistant - ML & CV</h3>
                         <p class="project-desc" style="color: var(--text-accent);">Kingston University (Sensibee™
                             Project)</p>
@@ -154,8 +155,8 @@
             <div class="projects-grid">
                 <!-- Education 1 -->
                 <div class="project-card fade-up">
-                    <div class="project-image" style="height: 120px; font-size: 2rem;">
-                        <i data-lucide="graduation-cap"></i>
+                    <div class="project-image">
+                        <img src="images/master_banner.png" alt="MSc Data Science Banner">
                     </div>
                     <div class="project-content">
                         <span class="tag" style="margin-bottom: 0.5rem; display: inline-block;">Jan 2024 - Jan
@@ -168,16 +169,18 @@
                 </div>
                 <!-- Education 2 -->
                 <div class="project-card fade-up">
-                    <div class="project-image" style="height: 120px; font-size: 2rem;">
-                        <i data-lucide="book-open"></i>
+                    <div class="project-image">
+                        <img src="images/be_banner.png" alt="B.E. Mechanical Engineering Banner">
                     </div>
                     <div class="project-content">
                         <span class="tag" style="margin-bottom: 0.5rem; display: inline-block;">Jun 2019 - Jun
                             2023</span>
-                        <h3 class="project-title">B.E. Mechanical Engineering</h3>
+                        <h3 class="project-title">B.E. Mechanical Engineering <span class="tag"
+                                style="background: var(--primary); color: white; font-size: 0.7rem; vertical-align: middle;">Minor
+                                in Computer Engineering</span></h3>
                         <p class="project-desc" style="color: var(--text-accent);">Shivaji University, India</p>
-                        <p class="project-desc">Earned a Minor in Computer Science (8.00 CGPA). Combined engineering
-                            principles with data science.</p>
+                        <p class="project-desc">Completed a specialized **Minor in Computer Engineering** (8.00 CGPA).
+                            Bridging the gap between engineering systems and intelligent software.</p>
                     </div>
                 </div>
             </div>
@@ -300,12 +303,35 @@
                 <!-- Cert 4 -->
                 <div class="project-card fade-up">
                     <div class="project-image">
-                        <img src="images/powerbi_tableau.png" alt="Tableau & Power BI">
+                        <img src="images/tableau_cert.png" alt="Tableau Certificate">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Tableau & Power BI</h3>
-                        <p class="project-desc">Fundamentals of Visualization - Expert in building interactive
+                        <h3 class="project-title">Tableau Desktop</h3>
+                        <p class="project-desc">Expertise in building interactive visual analytics and complex business
                             dashboards.</p>
+                    </div>
+                </div>
+                <!-- Cert 5 -->
+                <div class="project-card fade-up">
+                    <div class="project-image">
+                        <img src="images/powerbi_cert.png" alt="Power BI Certificate">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Microsoft Power BI</h3>
+                        <p class="project-desc">Proficient in end-to-end data modeling, DAX, and automated reporting
+                            solutions.</p>
+                    </div>
+                </div>
+
+                <!-- Cert 5 (New) -->
+                <div class="project-card fade-up">
+                    <div class="project-image">
+                        <img src="images/aws_ccp.png" alt="AWS Certified Cloud Practitioner">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AWS Certified Cloud Practitioner</h3>
+                        <p class="project-desc">Amazon Web Services (AWS) - Foundational understanding of AWS Cloud
+                            concepts, security, and technology.</p>
                     </div>
                 </div>
             </div>
@@ -337,6 +363,40 @@
             <p>&copy; 2025 Pratikraj Mugade. Built with intention.</p>
         </div>
     </footer>
+
+    <!-- Resume Selection Modal -->
+    <div id="resumeModal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal"><i data-lucide="x"></i></button>
+            <h2 class="modal-title">Select Resume Role</h2>
+            <div class="resume-options">
+                <a href="resume-da.pdf" target="_blank" class="resume-btn">
+                    <i data-lucide="bar-chart-3"></i>
+                    <div>
+                        <div style="font-size: 1.1rem;">Data Analyst</div>
+                        <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 400;">SQL, Power BI,
+                            Tableau</div>
+                    </div>
+                </a>
+                <a href="resume-de.pdf" target="_blank" class="resume-btn">
+                    <i data-lucide="database"></i>
+                    <div>
+                        <div style="font-size: 1.1rem;">Data Engineer</div>
+                        <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 400;">Snowflake, dbt,
+                            Airflow</div>
+                    </div>
+                </a>
+                <a href="resume-mle.pdf" target="_blank" class="resume-btn">
+                    <i data-lucide="brain-circuit"></i>
+                    <div>
+                        <div style="font-size: 1.1rem;">ML Engineer</div>
+                        <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 400;">Computer Vision,
+                            NLP, LLMs</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="script.js"></script>
