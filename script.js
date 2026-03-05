@@ -1,71 +1,71 @@
 // Initialize Lucide Icons
-lucide.createIcons();
+document.addEventListener('DOMContentLoaded', () => {
+    lucide.createIcons();
 
-// Smooth Scroll for Anchor Links (Polymorphic fallback if needed, but CSS handles most)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+    // Smooth scroll for in-page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (!target) return;
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
         });
     });
-});
 
-// Scroll Animation (Intersection Observer)
-const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-};
+    // Scroll reveal animation
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                obs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
 
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target); // Only animate once
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Header style on scroll
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', () => {
+        if (!header) return;
+        if (window.scrollY > 50) {
+            header.style.background = 'rgba(10, 10, 10, 0.95)';
+            header.style.boxShadow = '0 10px 30px -10px rgba(0,0,0,0.5)';
+        } else {
+            header.style.background = 'rgba(10, 10, 10, 0.8)';
+            header.style.boxShadow = 'none';
         }
     });
-}, observerOptions);
 
-document.querySelectorAll('.fade-up').forEach(el => {
-    observer.observe(el);
-});
+    // Resume modal
+    const resumeModal = document.getElementById('resumeModal');
+    const resumeTriggers = document.querySelectorAll('.resume-trigger');
+    const closeModalBtn = document.querySelector('.close-modal');
 
-// Navbar background on scroll
-const header = document.querySelector('.header');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.style.background = 'rgba(10, 10, 10, 0.95)';
-        header.style.boxShadow = '0 10px 30px -10px rgba(0,0,0,0.5)';
-    } else {
-        header.style.background = 'rgba(10, 10, 10, 0.8)';
-        header.style.boxShadow = 'none';
-    }
-});
+    const closeResumeModal = () => {
+        if (!resumeModal) return;
+        resumeModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    };
 
-// Resume Modal Logic
-const resumeModal = document.getElementById('resumeModal');
-const resumeTriggers = document.querySelectorAll('.resume-trigger');
-const closeModal = document.querySelector('.close-modal');
-
-resumeTriggers.forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-        e.preventDefault();
-        resumeModal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    resumeTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (!resumeModal) return;
+            resumeModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
     });
-});
 
-const closeResumeModal = () => {
-    resumeModal.classList.remove('active');
-    document.body.style.overflow = 'auto'; // Re-enable scrolling
-};
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', closeResumeModal);
+    }
 
-closeModal.addEventListener('click', closeResumeModal);
-
-// Close modal on outside click
-resumeModal.addEventListener('click', (e) => {
-    if (e.target === resumeModal) {
-        closeResumeModal();
+    if (resumeModal) {
+        resumeModal.addEventListener('click', (e) => {
+            if (e.target === resumeModal) {
+                closeResumeModal();
+            }
+        });
     }
 });
