@@ -1,476 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Creative Developer</title>
+    <title>Pratikraj Mugade | ML Engineer & Data Analyst</title>
     <meta name="description"
-        content="Personal portfolio of a creative developer specializing in building premium web experiences.">
-
-    <!-- Fonts -->
+        content="Portfolio of Pratikraj Mugade, showcasing machine learning systems, analytical dashboards, and production-minded data projects.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap"
         rel="stylesheet">
-
-    <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
-    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <!-- Header -->
-    <header class="header">
-        <div class="container nav">
-            <a href="#" class="logo">Pratikraj.</a>
-            <ul class="nav-list">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#experience" class="nav-link">Career Paths</a></li>
-                <li><a href="#" class="nav-link resume-trigger">Resume</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <a href="mailto:pmugade2019@gmail.com" class="cta-btn">Hire Me</a>
+    <header class="site-header">
+        <div class="shell nav-wrap">
+            <a class="brand" href="#top">Pratikraj Mugade</a>
+            <nav class="nav-links" aria-label="Primary navigation">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a class="nav-cta" href="#" data-open-resume>View Resume</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content fade-up">
-            <span class="hero-label">AI Enthusiast</span>
-            <h1 class="hero-title">Software that <span class="text-gradient">Thinks</span>, Models that <span
-                    class="text-gradient">Deliver</span>.</h1>
-            <p class="hero-desc">I am Pratikraj Mugade. I am open to roles like ML Engineer, Data Analyst, and Data
-                Engineer. I build production-grade intelligent systems that solve real-world problems.</p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">
-                    View My Work <i data-lucide="arrow-right"></i>
-                </a>
-                <a href="#" class="btn btn-outline resume-trigger">
-                    View Resume <i data-lucide="file-text"></i>
-                </a>
+    <main id="top">
+        <section class="hero">
+            <div class="shell hero-grid">
+                <div class="hero-copy fade-in">
+                    <span class="eyebrow">MSc Data Science · Kingston University</span>
+                    <h1>I build machine learning and analytics work that feels <em>useful</em>, clear, and ready for the real world.</h1>
+                    <p class="hero-text">
+                        I am Pratikraj Mugade, a data science graduate focused on machine learning, analytics, and
+                        production-ready AI systems. I enjoy turning messy data, research ideas, and business questions
+                        into tools people can actually use.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#projects">Explore My Work</a>
+                        <a class="btn btn-secondary" href="#" data-open-resume>Choose Resume</a>
+                    </div>
+                    <div class="socials">
+                        <a href="https://www.linkedin.com/in/pratikraj-mugade/" target="_blank" rel="noreferrer">LinkedIn</a>
+                        <a href="https://github.com/Patric-1613" target="_blank" rel="noreferrer">GitHub</a>
+                        <a href="https://medium.com/@patric-1613" target="_blank" rel="noreferrer">Medium</a>
+                    </div>
+                </div>
+                <div class="hero-photo fade-in">
+                    <div class="hero-frame">
+                        <img src="images/graduation-portrait.jpeg" alt="Pratikraj Mugade at Kingston University graduation">
+                    </div>
+                    <div class="status-chip">
+                        <span class="status-dot"></span>
+                        Open to ML Engineer, Data Analyst, and Data Engineer roles
+                    </div>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/pratikraj-mugade/" target="_blank" class="social-link"><i
-                        data-lucide="linkedin"></i></a>
-                <a href="https://github.com/Patric-1613" target="_blank" class="social-link"><i
-                        data-lucide="github"></i></a>
-                <a href="https://medium.com/@patric-1613" target="_blank" class="social-link"><i
-                        data-lucide="file-text"></i></a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-header fade-up">
-                <span class="section-subtitle">My Journey</span>
-                <h2 class="section-title">About Me</h2>
-            </div>
-            <div class="about-grid fade-up">
-                <div class="about-text">
-                    <p>I grew up with a mindset that "If your will is strong enough, nothing can stop you." This drove
-                        my pivot from Mechanical Engineering to Data Science. During my engineering degree, a minor in
-                        CS sparked a fascination with how data can explain and predict the world.</p>
-                    <p>I recently graduated with Distinction in MSc Data Science from Kingston University. My work
-                        ranges from building Ecological Monitoring systems with YOLOv11 to designing LLM-powered
-                        document intelligence apps. I care deeply about building trust in models, transparent pipelines,
-                        and solutions that help people make smarter decisions.</p>
-                </div>
-                <div>
-                    <h3>Technical Arsenal</h3>
-                    <div class="skills-list">
-                        <div class="skill-item"><i data-lucide="brain-circuit"></i> Machine Learning</div>
-                        <div class="skill-item"><i data-lucide="eye"></i> Computer Vision (YOLO)</div>
-                        <div class="skill-item"><i data-lucide="database"></i> SQL & Snowflake</div>
-                        <div class="skill-item"><i data-lucide="file-code"></i> Python (Pandas/NumPy)</div>
-                        <div class="skill-item"><i data-lucide="bar-chart-3"></i> Power BI & Tableau</div>
-                        <div class="skill-item"><i data-lucide="cloud"></i> AWS</div>
-                        <div class="skill-item"><i data-lucide="workflow"></i> Airflow & dbt</div>
-                        <div class="skill-item"><i data-lucide="bot"></i> NLP & LLMs</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section (Added) -->
-    <section id="experience" class="section" style="background: rgba(255,255,255,0.02);">
-        <div class="container">
-            <div class="section-header fade-up">
-                <span class="section-subtitle">Career Path</span>
-                <h2 class="section-title">Career Paths</h2>
-            </div>
-            <div class="projects-grid">
-                <!-- Experience 1 -->
-                <div class="project-card fade-up">
-                    <div class="project-content">
-                        <span class="tag" style="margin-bottom: 1rem; display: inline-block;">Mar 2025 - Aug 2025</span>
-                        <h3 class="project-title">Research Assistant - ML & CV</h3>
-                        <p class="project-desc" style="color: var(--text-accent);">Kingston University (Sensibee™
-                            Project)</p>
-                        <p class="project-desc">Developing production-grade YOLOv11 models for automated ecological
-                            monitoring. Achieved 95% mAP@50 and reduced false detections by 75% in real-world
-                            deployments.</p>
-                    </div>
-                </div>
-                <!-- Experience 2 -->
-                <div class="project-card fade-up">
-                    <div class="project-content">
-                        <span class="tag" style="margin-bottom: 1rem; display: inline-block;">May 2023 - Dec 2023</span>
-                        <h3 class="project-title">Data Science Intern</h3>
-                        <p class="project-desc" style="color: var(--text-accent);">Netsoft Technologies</p>
-                        <p class="project-desc">Built diagnostic and threat-detection models, including a CKD classifier
-                            (97% accuracy) and IDS model (99.91% accuracy). Delivered Streamlit dashboards reducing
-                            reporting time by 40%.</p>
-                    </div>
-                </div>
-                <!-- Experience 3 -->
-                <div class="project-card fade-up">
-                    <div class="project-content">
-                        <span class="tag" style="margin-bottom: 1rem; display: inline-block;">Jan 2023 - Jul 2023</span>
-                        <h3 class="project-title">Research Assistant</h3>
-                        <p class="project-desc" style="color: var(--text-accent);">Rajarambapu Institute of Technology
+        <section id="about" class="section">
+            <div class="shell">
+                <p class="section-label fade-in">About</p>
+                <h2 class="section-title fade-in">A practical builder with an analytical mindset.</h2>
+                <div class="about-grid">
+                    <div class="about-text fade-in">
+                        <p>
+                            My path into data was not linear. I began in mechanical engineering, discovered computer
+                            engineering through a minor, and ended up fully invested in the idea that data can explain,
+                            predict, and improve real systems.
                         </p>
-                        <p class="project-desc">Developed custom C code for solving complex thermal equations in
-                            Hydrogen Storage Reactors. Conducted numerical investigations using CFD.</p>
+                        <p>
+                            Since then, I have worked across computer vision, business intelligence, SQL analytics,
+                            dashboarding, and applied machine learning. What matters most to me is not only model
+                            accuracy, but whether the final output is understandable, reliable, and genuinely helpful to
+                            the person using it.
+                        </p>
+                    </div>
+                    <div class="skill-panel fade-in">
+                        <div class="skill-pill">Machine Learning</div>
+                        <div class="skill-pill">Computer Vision</div>
+                        <div class="skill-pill">Python</div>
+                        <div class="skill-pill">SQL / BigQuery</div>
+                        <div class="skill-pill">Power BI</div>
+                        <div class="skill-pill">Tableau</div>
+                        <div class="skill-pill">TensorFlow / Keras</div>
+                        <div class="skill-pill">AWS</div>
+                        <div class="skill-pill">Docker</div>
+                        <div class="skill-pill">dbt / Airflow</div>
+                        <div class="skill-pill">NLP / LLMs</div>
+                        <div class="skill-pill">Data Storytelling</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Education Section (NEW) -->
-    <section id="education" class="section">
-        <div class="container">
-            <div class="section-header fade-up">
-                <span class="section-subtitle">Academic Background</span>
-                <h2 class="section-title">Education</h2>
-            </div>
-            <div class="projects-grid">
-                <!-- Education 1 -->
-                <div class="project-card fade-up">
-                    <div class="project-image">
-                        <img src="images/master_banner.png" alt="MSc Data Science Banner">
-                    </div>
-                    <div class="project-content">
-                        <span class="tag" style="margin-bottom: 0.5rem; display: inline-block;">Jan 2024 - Jan
-                            2025</span>
-                        <h3 class="project-title">MSc Data Science</h3>
-                        <p class="project-desc" style="color: var(--text-accent);">Kingston University, London</p>
-                        <p class="project-desc">Graduated with Distinction (2:1). Specialized in Machine Learning, NLP,
-                            and Cloud Platforms.</p>
-                    </div>
-                </div>
-                <!-- Education 2 -->
-                <div class="project-card fade-up">
-                    <div class="project-image">
-                        <img src="images/be_banner.png" alt="B.E. Mechanical Engineering Banner">
-                    </div>
-                    <div class="project-content">
-                        <span class="tag" style="margin-bottom: 0.5rem; display: inline-block;">Jun 2019 - Jun
-                            2023</span>
-                        <h3 class="project-title">B.E. Mechanical Engineering <span class="tag"
-                                style="background: var(--primary); color: white; font-size: 0.7rem; vertical-align: middle;">Minor
-                                in Computer Engineering</span></h3>
-                        <p class="project-desc" style="color: var(--text-accent);">Shivaji University, India</p>
-                        <p class="project-desc">Completed a specialized **Minor in Computer Engineering** (8.00 CGPA).
-                            Bridging the gap between engineering systems and intelligent software.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <div class="section-header fade-up">
-                <span class="section-subtitle">Selected Work</span>
-                <h2 class="section-title">Key Projects</h2>
-            </div>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card fade-up">
-                    <div class="project-image">
-                        <img src="images/insect_ai.png" alt="Insect Species AI">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Insect Species Classification</h3>
-                        <p class="project-desc">MSc Dissertation project achieving 98.73% accuracy on insect
-                            classification using InceptionV3 and transfer learning. Built a custom dataset of 10K+
-                            images.</p>
-                        <div class="project-tags">
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">InceptionV3</span>
-                            <span class="tag">Computer Vision</span>
-                            <span class="tag">MLOps</span>
-                            <span class="tag">AWS EC2</span>
+        <section id="experience" class="section section-alt">
+            <div class="shell">
+                <p class="section-label fade-in">Experience</p>
+                <h2 class="section-title fade-in">Work that mixes research depth with delivery.</h2>
+                <div class="timeline">
+                    <article class="timeline-card fade-in">
+                        <div class="timeline-dot"></div>
+                        <div>
+                            <p class="timeline-date">Mar 2025 – Aug 2025</p>
+                            <h3>Research Assistant, Machine Learning & Computer Vision</h3>
+                            <p class="timeline-org">Kingston University · Sensibee Project</p>
+                            <p>
+                                Built YOLOv11-based ecological monitoring models for bee and insect detection, improving
+                                field reliability and reducing false detections by 75 percent in deployment-oriented
+                                testing.
+                            </p>
                         </div>
-                        <div class="project-actions">
-                            <a href="http://16.171.241.135" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                                Try Live Demo <i data-lucide="external-link"></i>
-                            </a>
-                            <a href="https://github.com/Patric-1613/MultiInsectClassifier" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                                View Project <i data-lucide="github"></i>
-                            </a>
+                    </article>
+                    <article class="timeline-card fade-in">
+                        <div class="timeline-dot"></div>
+                        <div>
+                            <p class="timeline-date">May 2023 – Dec 2023</p>
+                            <h3>Data Science Intern</h3>
+                            <p class="timeline-org">Netsoft Technologies</p>
+                            <p>
+                                Built healthcare and cybersecurity classification systems, including a CKD model with 97
+                                percent accuracy and an intrusion detection system at 99.91 percent, supported by
+                                Streamlit dashboards.
+                            </p>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card fade-up">
-                    <div class="project-image">
-                        <img src="images/analytics_dashboard.png" alt="Customer Analytics Dashboard">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Customer Analytics Pipeline</h3>
-                        <p class="project-desc">End-to-end analytics pipeline using Snowflake, dbt, and Airflow.
-                            Implemented custom anomaly detection and hybrid batch+streaming ingestion.</p>
-                        <div class="project-tags">
-                            <span class="tag">Snowflake</span>
-                            <span class="tag">dbt</span>
-                            <span class="tag">Airflow</span>
-                            <span class="tag">Python</span>
+                    </article>
+                    <article class="timeline-card fade-in">
+                        <div class="timeline-dot"></div>
+                        <div>
+                            <p class="timeline-date">Jan 2023 – Jul 2023</p>
+                            <h3>Research Assistant</h3>
+                            <p class="timeline-org">Rajarambapu Institute of Technology</p>
+                            <p>
+                                Developed C-based numerical methods for hydrogen storage reactor heat-transfer analysis,
+                                combining engineering modelling with computational experimentation.
+                            </p>
                         </div>
-                    </div>
+                    </article>
                 </div>
+            </div>
+        </section>
 
-                <!-- Project 3 -->
-                <div class="project-card fade-up">
-                    <div class="project-image">
-                        <img src="images/chatbot_ai.png" alt="LangChain Chatbot">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">LangChain PDF Chatbot</h3>
-                        <p class="project-desc">Information Retrieval System using vector DBs and Google PaLM2 for
-                            document-aware Q&A. Integrated with Streamlit UI.</p>
-                        <div class="project-tags">
-                            <span class="tag">LangChain</span>
-                            <span class="tag">FAISS</span>
-                            <span class="tag">LLM</span>
-                            <span class="tag">Streamlit</span>
+        <section id="education" class="section">
+            <div class="shell">
+                <p class="section-label fade-in">Education</p>
+                <h2 class="section-title fade-in">The academic foundation behind the work.</h2>
+                <div class="cards-grid two-up">
+                    <article class="info-card fade-in">
+                        <img src="images/master_banner.png" alt="Kingston University banner">
+                        <div class="info-body">
+                            <p class="info-date">2024 – 2025</p>
+                            <h3>MSc Data Science</h3>
+                            <p class="info-org">Kingston University, London</p>
+                            <p>Graduated with Distinction, with a focus on machine learning, NLP, analytics, and cloud tooling.</p>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card fade-up">
-                    <div class="project-image">
-                        <img src="images/permitting_analytics.png" alt="Permitting Analytics">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Permitting Service Analytics</h3>
-                        <p class="project-desc">Analyzed Environment Agency data to identify operational bottlenecks
-                            using Python and Power BI. Engineered features regarding refusal likelihood.</p>
-                        <div class="project-tags">
-                            <span class="tag">Power BI</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">EDA</span>
+                    </article>
+                    <article class="info-card fade-in">
+                        <img src="images/be_banner.png" alt="Undergraduate banner">
+                        <div class="info-body">
+                            <p class="info-date">2019 – 2023</p>
+                            <h3>B.E. Mechanical Engineering</h3>
+                            <p class="info-org">Shivaji University · Minor in Computer Engineering</p>
+                            <p>Built a technical bridge between engineering systems, programming, and applied analytics.</p>
                         </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section section-alt">
+            <div class="shell">
+                <p class="section-label fade-in">Projects</p>
+                <h2 class="section-title fade-in">Projects people can actually open, try, and inspect.</h2>
+                <div class="cards-grid">
+                    <article class="project-card fade-in" data-project="insect">
+                        <img src="images/insect_ai.png" alt="Insect classifier project preview">
+                        <div class="project-body">
+                            <h3>Multi Insect Classifier</h3>
+                            <p>
+                                Dissertation work turned into a public web app with Docker, AWS EC2 deployment, model
+                                switching, and a live prediction interface.
+                            </p>
+                            <div class="tag-row">
+                                <span>TensorFlow</span><span>Flask</span><span>Docker</span><span>AWS EC2</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="text-link" data-project-open="insect">Explore</button>
+                                <a href="http://16.171.241.135" target="_blank" rel="noreferrer">Live Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card fade-in" data-project="urbanroll">
+                        <img src="images/urbanroll_dashboard.png" alt="UrbanRoll dashboard preview">
+                        <div class="project-body">
+                            <h3>UrbanRoll Bike Analysis</h3>
+                            <p>
+                                SQL-first operational analytics project focused on rider behaviour, station flow,
+                                rebalancing issues, and membership conversion opportunities.
+                            </p>
+                            <div class="tag-row">
+                                <span>BigQuery</span><span>SQL</span><span>Tableau</span><span>Ops Analytics</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="text-link" data-project-open="urbanroll">View Dashboard</button>
+                                <a href="https://github.com/Patric-1613/UrbanRoll-bike-analysis" target="_blank" rel="noreferrer">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card fade-in" data-project="ecommerce">
+                        <img src="images/ecommerce_dashboard.png" alt="E-commerce funnel dashboard preview">
+                        <div class="project-body">
+                            <h3>E-commerce Funnel Analysis</h3>
+                            <p>
+                                A funnel conversion study across acquisition channels, drop-off stages, conversion timing,
+                                and revenue impact using BigQuery and Tableau Public.
+                            </p>
+                            <div class="tag-row">
+                                <span>BigQuery</span><span>Tableau</span><span>SQL</span><span>Funnel Analytics</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="text-link" data-project-open="ecommerce">View Dashboard</button>
+                                <a href="https://github.com/Patric-1613/ecommerce-funnel-analysis" target="_blank" rel="noreferrer">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card fade-in" data-project="permitting">
+                        <img src="images/permitting_analytics.png" alt="Environment Agency analytics preview">
+                        <div class="project-body">
+                            <h3>Environment Agency Permitting Analytics</h3>
+                            <p>
+                                Python and Power BI analysis of permit processing data to surface refusal hotspots,
+                                determination delays, and operational bottlenecks across three years.
+                            </p>
+                            <div class="tag-row">
+                                <span>Power BI</span><span>Python</span><span>EDA</span><span>Public Sector Data</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="text-link" data-project-open="permitting">Open Dashboard PDF</button>
+                                <a href="https://github.com/Patric-1613/Permitting-Service-Data-Analysis-project" target="_blank" rel="noreferrer">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card fade-in" data-project="sensibee">
+                        <img src="images/analytics_dashboard.png" alt="Research project preview">
+                        <div class="project-body">
+                            <h3>Sensibee Ecological Monitor</h3>
+                            <p>
+                                Research-driven detection pipeline for ecological monitoring using YOLOv11, focused on
+                                real-time, high-precision field use cases.
+                            </p>
+                            <div class="tag-row">
+                                <span>YOLOv11</span><span>Computer Vision</span><span>MLOps</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="text-link" data-project-open="sensibee">Explore</button>
+                                <a href="https://github.com/Patric-1613" target="_blank" rel="noreferrer">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card fade-in" data-project="chatbot">
+                        <img src="images/chatbot_ai.png" alt="PDF chatbot preview">
+                        <div class="project-body">
+                            <h3>PDF Chatbot with RAG</h3>
+                            <p>
+                                A retrieval-based document assistant built for conversational interaction with PDF
+                                content using vector search and LLM orchestration.
+                            </p>
+                            <div class="tag-row">
+                                <span>LangChain</span><span>FAISS</span><span>LLM</span><span>Streamlit</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="text-link" data-project-open="chatbot">Explore</button>
+                                <a href="https://github.com/Patric-1613" target="_blank" rel="noreferrer">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="section">
+            <div class="shell">
+                <p class="section-label fade-in">Certifications</p>
+                <h2 class="section-title fade-in">Credentials that support the craft.</h2>
+                <div class="cards-grid three-up">
+                    <article class="cert-card fade-in">
+                        <img src="images/aws_ai_practitioner.png" alt="AWS AI Practitioner certificate">
+                        <div>
+                            <h3>AWS Certified AI Practitioner</h3>
+                            <p class="cert-org">Amazon Web Services</p>
+                            <p>Validated foundations in responsible AI, ML concepts, and AWS AI services.</p>
+                        </div>
+                    </article>
+                    <article class="cert-card fade-in">
+                        <img src="images/aws_ccp.png" alt="AWS Cloud Practitioner certificate">
+                        <div>
+                            <h3>AWS Certified Cloud Practitioner</h3>
+                            <p class="cert-org">Amazon Web Services</p>
+                            <p>Built a strong cloud baseline across architecture, pricing, security, and operations.</p>
+                        </div>
+                    </article>
+                    <article class="cert-card fade-in">
+                        <img src="images/tableau_cert.png" alt="Tableau certificate">
+                        <div>
+                            <h3>Tableau Desktop</h3>
+                            <p class="cert-org">Data Visualisation</p>
+                            <p>Interactive dashboard design, storytelling, filtering logic, and presentation-ready visuals.</p>
+                        </div>
+                    </article>
+                    <article class="cert-card fade-in">
+                        <img src="images/powerbi_cert.png" alt="Power BI certificate">
+                        <div>
+                            <h3>Microsoft Power BI</h3>
+                            <p class="cert-org">Business Intelligence</p>
+                            <p>Hands-on dashboarding, DAX-based metrics, drill-through reporting, and executive summaries.</p>
+                        </div>
+                    </article>
+                    <article class="cert-card fade-in">
+                        <img src="images/cnn_specialization.png" alt="CNN specialization certificate">
+                        <div>
+                            <h3>CNN Specialization</h3>
+                            <p class="cert-org">DeepLearning.AI</p>
+                            <p>Deepened practical understanding of modern computer vision architectures and transfer learning.</p>
+                        </div>
+                    </article>
+                    <article class="cert-card fade-in">
+                        <img src="images/best_msc_project.png" alt="Best MSc project award">
+                        <div>
+                            <h3>Best MSc Project</h3>
+                            <p class="cert-org">Kingston University</p>
+                            <p>Recognition for standout postgraduate project work in machine learning and applied research.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-alt">
+            <div class="shell">
+                <div class="contact-panel fade-in">
+                    <p class="section-label">Contact</p>
+                    <h2>Let’s build something thoughtful and useful.</h2>
+                    <p>
+                        If you are hiring for machine learning, analytics, or data-focused roles, I would love to talk.
+                        I am especially interested in teams that care about good systems, clear communication, and
+                        measurable impact.
+                    </p>
+                    <div class="contact-actions">
+                        <a class="btn btn-primary" href="mailto:pmugade2019@gmail.com">Email Me</a>
+                        <a class="btn btn-secondary" href="https://www.linkedin.com/in/pratikraj-mugade/" target="_blank" rel="noreferrer">LinkedIn</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Live Demo Section -->
-    <section id="classifier" class="section" style="background: rgba(255,255,255,0.01);">
-        <div class="container">
-            <div class="section-header fade-up">
-                <span class="section-subtitle">Live Demo</span>
-                <h2 class="section-title">Try the Insect Classifier</h2>
-            </div>
-            <div class="classifier-card glass-panel fade-up">
-                <p class="project-desc" style="margin-bottom: 1rem;">
-                    This classifier is deployed on AWS EC2 with Docker. Open the live app, upload an insect image,
-                    choose a model, and get real-time predictions with confidence scores.
-                </p>
-                <div class="project-tags" style="margin-bottom: 1.25rem;">
-                    <span class="tag">Flask API</span>
-                    <span class="tag">Docker</span>
-                    <span class="tag">AWS EC2</span>
-                    <span class="tag">TensorFlow</span>
-                    <span class="tag">Transfer Learning</span>
-                </div>
-                <div class="project-actions">
-                    <a href="http://16.171.241.135" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                        Open Live Classifier <i data-lucide="external-link"></i>
-                    </a>
-                    <a href="https://github.com/Patric-1613/MultiInsectClassifier" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                        Source Code <i data-lucide="github"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certificates Section (NEW) -->
-    <section id="certificates" class="section" style="background: rgba(255,255,255,0.02);">
-        <div class="container">
-            <div class="section-header fade-up">
-                <span class="section-subtitle">Credentials</span>
-                <h2 class="section-title">Certifications & Awards</h2>
-            </div>
-            <div class="projects-grid">
-                <!-- Cert 1 -->
-                <div class="project-card fade-up">
-                    <div class="project-image">
-                        <img src="images/best_msc_project.png" alt="Best MSc Project">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Best MSc Project (2025)</h3>
-                        <p class="project-desc">Kingston University - Recognized for excellence in deep learning-based
-                            ecological monitoring.</p>
-                    </div>
-                </div>
-
-                <!-- Cert 3 -->
-                <div class="project-card fade-up">
-                    <div class="project-image">
-                        <img src="images/cnn_specialization.png" alt="CNN Specialization">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">CNN Specialization</h3>
-                        <p class="project-desc">Coursera (DeepLearning.AI) - Advanced computer vision techniques and
-                            architecture implementation.</p>
-                    </div>
-                </div>
-                <!-- Cert 4 -->
-                <div class="project-card fade-up">
-                    <div class="project-image">
-                        <img src="images/tableau_cert.png" alt="Tableau Certificate">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Tableau Desktop</h3>
-                        <p class="project-desc">Expertise in building interactive visual analytics and complex business
-                            dashboards.</p>
-                    </div>
-                </div>
-                <!-- Cert 5 -->
-                <div class="project-card fade-up">
-                    <div class="project-image">
-                        <img src="images/powerbi_cert.png" alt="Power BI Certificate">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Microsoft Power BI</h3>
-                        <p class="project-desc">Proficient in end-to-end data modeling, DAX, and automated reporting
-                            solutions.</p>
-                    </div>
-                </div>
-
-                <!-- Cert 5 (New) -->
-                <div class="project-card fade-up">
-                    <div class="project-image">
-                        <img src="images/aws_ccp.png" alt="AWS Certified Cloud Practitioner">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">AWS Certified Cloud Practitioner</h3>
-                        <p class="project-desc">Amazon Web Services (AWS) - Foundational understanding of AWS Cloud
-                            concepts, security, and technology.</p>
-                    </div>
-                </div>
-
-                <!-- Cert 6 (Publication) -->
-                <div class="project-card fade-up">
-                    <div class="project-image">
-                        <img src="images/bmc_publication.png" alt="BMC Publication">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Co-author, Peer-reviewed Publication</h3>
-                        <p class="project-desc" style="color: var(--text-accent);">BMC Proceedings (2025)</p>
-                        <p class="project-desc">BeSafeBeeHoney: Exploring Beekeeping Innovations and Science. DOI:
-                            10.1186/s12919-025-00347-z</p>
-                    </div>
-                </div>
-
-                <!-- Cert 7 (BAJA SAE) -->
-                <div class="project-card fade-up">
-                    <div class="project-image">
-                        <img src="images/baja_sae.png" alt="BAJA SAE India Achievement">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">BAJA SAE India</h3>
-                        <p class="project-desc" style="color: var(--text-accent);">All-India Rank 4 (M-BAJA) & Rank 16
-                            (E-BAJA)</p>
-                        <p class="project-desc">Co-leader, Suspension Head, and Finance Handler. Led engineering design
-                            and performance optimisation in national competition with 200+ teams.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container fade-up">
-            <div class="contact-container">
-                <h2 class="contact-title">Let's Build Something Meaningful.</h2>
-                <p class="hero-desc" style="margin: 0 auto 2rem auto;">I'm open to opportunities in AI, Data Science,
-                    and Engineering. If you're building in sustainability, fintech, or healthtech, let's connect.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="mailto:pmugade2019@gmail.com" class="btn btn-primary">
-                        <i data-lucide="mail"></i> Email Me
-                    </a>
-                    <a href="https://www.linkedin.com/in/pratikraj-mugade/" target="_blank" class="btn btn-outline">
-                        <i data-lucide="linkedin"></i> LinkedIn
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Pratikraj Mugade. Built with intention.</p>
+    <footer class="site-footer">
+        <div class="shell">
+            <p>Built with intention. Updated with live projects, dashboards, and deployable machine learning work.</p>
         </div>
     </footer>
 
-    <!-- Resume Selection Modal -->
-    <div id="resumeModal" class="modal">
-        <div class="modal-content">
-            <button class="close-modal"><i data-lucide="x"></i></button>
-            <h2 class="modal-title">Select Resume Role</h2>
-            <div class="resume-options">
-                <a href="resume-da.pdf" target="_blank" class="resume-btn">
-                    <i data-lucide="bar-chart-3"></i>
-                    <div>
-                        <div style="font-size: 1.1rem;">Data Analyst</div>
-                        <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 400;">SQL, Power BI,
-                            Tableau</div>
-                    </div>
-                </a>
-                <a href="resume-de.pdf" target="_blank" class="resume-btn">
-                    <i data-lucide="database"></i>
-                    <div>
-                        <div style="font-size: 1.1rem;">Data Engineer</div>
-                        <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 400;">Snowflake, dbt,
-                            Airflow</div>
-                    </div>
-                </a>
-                <a href="resume-mle.pdf" target="_blank" class="resume-btn">
-                    <i data-lucide="brain-circuit"></i>
-                    <div>
-                        <div style="font-size: 1.1rem;">ML Engineer</div>
-                        <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 400;">Computer Vision,
-                            NLP, LLMs</div>
-                    </div>
-                </a>
+    <div class="overlay" id="projectModal" aria-hidden="true">
+        <div class="modal-card modal-project">
+            <button class="modal-close" type="button" data-close-project aria-label="Close project details">×</button>
+            <div id="modalVisual" class="modal-visual"></div>
+            <div class="modal-body">
+                <p id="modalSubtitle" class="modal-subtitle"></p>
+                <h3 id="modalTitle"></h3>
+                <div id="modalTags" class="tag-row tag-row-modal"></div>
+                <div id="modalDescription" class="modal-description"></div>
+                <div id="modalLinks" class="modal-links"></div>
             </div>
         </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
-    <script>
-        lucide.createIcons();
-    </script>
-</body>
+    <div class="overlay" id="resumeModal" aria-hidden="true">
+        <div class="modal-card modal-resume">
+            <button class="modal-close" type="button" data-close-resume aria-label="Close resume dialog">×</button>
+            <div class="modal-body">
+                <p class="modal-subtitle">Resume Selection</p>
+                <h3>Choose the version that matches the role.</h3>
+                <div class="resume-grid">
+                    <a class="resume-option" href="resume-da.pdf" target="_blank" rel="noreferrer">
+                        <strong>Data Analyst</strong>
+                        <span>Power BI, Tableau, SQL, business insights</span>
+                    </a>
+                    <a class="resume-option" href="resume-de.pdf" target="_blank" rel="noreferrer">
+                        <strong>Data Engineer</strong>
+                        <span>Warehousing, dbt, orchestration, pipelines</span>
+                    </a>
+                    <a class="resume-option" href="resume-mle.pdf" target="_blank" rel="noreferrer">
+                        <strong>ML Engineer</strong>
+                        <span>Computer vision, deployment, LLM systems</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script src="script.js"></script>
+</body>
 </html>
