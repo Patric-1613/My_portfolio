@@ -426,6 +426,21 @@ button {
     padding: 1.25rem;
 }
 
+.edu-brand {
+    display: flex;
+    align-items: center;
+    min-height: 56px;
+    margin-bottom: 0.75rem;
+}
+
+.edu-brand img {
+    width: auto;
+    max-width: 180px;
+    max-height: 56px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.18));
+}
+
 .project-card {
     display: flex;
     flex-direction: column;
@@ -702,5 +717,9 @@ button {
 
     .cert-card {
         grid-template-columns: 1fr;
+    }
+
+    .edu-brand {
+        min-height: auto;
     }
 }
