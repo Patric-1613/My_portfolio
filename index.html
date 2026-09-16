@@ -25,7 +25,7 @@
                 <a href="#certifications">Certifications</a>
                 <a href="#contact">Contact</a>
             </nav>
-            <a class="nav-cta" href="#" data-open-resume>View Resume</a>
+            <a class="nav-cta" href="resume.pdf" target="_blank" rel="noreferrer">View CV</a>
         </div>
     </header>
 
@@ -33,7 +33,7 @@
         <section class="hero">
             <div class="shell hero-grid">
                 <div class="hero-copy fade-in">
-                    <span class="eyebrow">MSc Data Science · Kingston University</span>
+                    <span class="eyebrow">GenAI Intern · Virtusa UK</span>
                     <h1>I build machine learning and analytics work that feels <em>useful</em>, clear, and ready for the real world.</h1>
                     <p class="hero-text">
                         Based in London. I turn messy data, research ideas, and business questions into systems people
@@ -41,7 +41,7 @@
                     </p>
                     <div class="hero-actions">
                         <a class="btn btn-primary" href="#projects">Explore My Work</a>
-                        <a class="btn btn-secondary" href="#" data-open-resume>Choose Resume</a>
+                        <a class="btn btn-secondary" href="resume.pdf" target="_blank" rel="noreferrer">Download CV</a>
                     </div>
                     <div class="socials">
                         <a href="https://www.linkedin.com/in/pratikraj-mugade/" target="_blank" rel="noreferrer">LinkedIn</a>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="status-chip">
                         <span class="status-dot"></span>
-                        Open to ML Engineer and Data Science roles
+                        Open to GenAI, ML Engineer and Data Science roles
                     </div>
                 </div>
             </div>
@@ -80,17 +80,17 @@
                         </p>
                     </div>
                     <div class="skill-panel fade-in">
+                        <div class="skill-pill">LangChain / LangGraph</div>
+                        <div class="skill-pill">RAG / Vector DBs</div>
+                        <div class="skill-pill">FastAPI</div>
                         <div class="skill-pill">Machine Learning</div>
                         <div class="skill-pill">Computer Vision</div>
                         <div class="skill-pill">Python</div>
                         <div class="skill-pill">SQL / BigQuery</div>
-                        <div class="skill-pill">Power BI</div>
-                        <div class="skill-pill">Tableau</div>
+                        <div class="skill-pill">Power BI / Tableau</div>
                         <div class="skill-pill">TensorFlow / Keras</div>
                         <div class="skill-pill">AWS</div>
-                        <div class="skill-pill">Docker</div>
-                        <div class="skill-pill">dbt / Airflow</div>
-                        <div class="skill-pill">NLP / LLMs</div>
+                        <div class="skill-pill">Docker / CI-CD</div>
                         <div class="skill-pill">Data Storytelling</div>
                     </div>
                 </div>
@@ -105,13 +105,40 @@
                     <article class="timeline-card fade-in">
                         <div class="timeline-dot"></div>
                         <div>
-                            <p class="timeline-date">Mar 2025 – Aug 2025</p>
-                            <h3>Research Assistant, Machine Learning & Computer Vision</h3>
-                            <p class="timeline-org">Kingston University · Sensibee Project</p>
+                            <p class="timeline-date">Jun 2026 – Present</p>
+                            <h3>GenAI Intern</h3>
+                            <p class="timeline-org">Virtusa UK</p>
                             <p>
-                                Built YOLOv11-based ecological monitoring models for bee and insect detection, improving
-                                field reliability and reducing false detections by 75 percent in deployment-oriented
-                                testing.
+                                Architected a multi-user LangGraph research agent that nearly 4x'd recall@10 via
+                                citation-partitioned reranking, co-built a stateful platform tracking official
+                                LLM-provider announcements, and built a chat agent giving impact-scored, pattern-reuse
+                                insight across a 500+ pipeline life-sciences data estate.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="timeline-card fade-in">
+                        <div class="timeline-dot"></div>
+                        <div>
+                            <p class="timeline-date">Sep 2025 – Jun 2026</p>
+                            <h3>Data Engineering Lead, Co-Founder</h3>
+                            <p class="timeline-org">Yabasa Platform</p>
+                            <p>
+                                Designed the data architecture for a live peer-to-peer review platform (MySQL, MongoDB,
+                                Redis), built automated validation pipelines for schema integrity, and supported the
+                                early product launch to 200+ active users.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="timeline-card fade-in">
+                        <div class="timeline-dot"></div>
+                        <div>
+                            <p class="timeline-date">Mar 2025 – Aug 2025</p>
+                            <h3>Machine Learning Engineer</h3>
+                            <p class="timeline-org">Pollinatework · Sensibee (DEFRA-Regulated)</p>
+                            <p>
+                                Built and deployed YOLOv11-based ecological monitoring models from unstructured
+                                IoT field-camera and sensor data, automated the git pipelines behind them, and cleaned
+                                10,000+ GDPR-compliant records.
                             </p>
                         </div>
                     </article>
@@ -122,9 +149,9 @@
                             <h3>Data Science Intern</h3>
                             <p class="timeline-org">Netsoft Technologies</p>
                             <p>
-                                Built healthcare and cybersecurity classification systems, including a CKD model with 97
-                                percent accuracy and an intrusion detection system at 99.91 percent, supported by
-                                Streamlit dashboards.
+                                Built a chronic kidney disease diagnostic classifier, running EDA to catch imbalance
+                                and quality issues and lifting model performance from 95 to 98 percent using SMOTE and
+                                feature refinement.
                             </p>
                         </div>
                     </article>
@@ -182,13 +209,64 @@
                 <p class="section-label fade-in">Projects</p>
                 <h2 class="section-title fade-in">Projects people can actually open, try, and inspect.</h2>
                 <div class="cards-grid">
+                    <article class="project-card fade-in" data-project="litreview">
+                        <div class="project-thumb-placeholder"><i data-lucide="brain-circuit"></i></div>
+                        <div class="project-body">
+                            <h3>AI Literature Review Agent</h3>
+                            <p>
+                                Multi-user LangGraph research workspace that searches, ranks, and synthesises academic
+                                literature into cited reports, with RAGAS-benchmarked retrieval and red-teamed guardrails.
+                            </p>
+                            <div class="tag-row">
+                                <span>LangGraph</span><span>LangChain</span><span>RAG</span><span>FastAPI</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="text-link" data-project-open="litreview">View Project</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card fade-in" data-project="aidigest">
+                        <div class="project-thumb-placeholder"><i data-lucide="radar"></i></div>
+                        <div class="project-body">
+                            <h3>AI Daily Digest Platform</h3>
+                            <p>
+                                Stateful LangGraph agent that ingests, versions, and digests official AI-provider
+                                announcements, with automated CI quality gates and human-in-the-loop validation.
+                            </p>
+                            <div class="tag-row">
+                                <span>LangGraph</span><span>FastAPI</span><span>pgvector</span><span>CI/CD</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="text-link" data-project-open="aidigest">View Project</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card fade-in" data-project="snaplogic">
+                        <div class="project-thumb-placeholder"><i data-lucide="network"></i></div>
+                        <div class="project-body">
+                            <h3>SnapLogic Estate Advisor</h3>
+                            <p>
+                                Chat-based agent giving operational insight across 500+ life-sciences data pipelines,
+                                with dependency/blast-radius risk scoring and reusable-pattern detection.
+                            </p>
+                            <div class="tag-row">
+                                <span>Chat Agent</span><span>Databricks</span><span>Dependency Graphs</span>
+                            </div>
+                            <div class="project-links">
+                                <button class="text-link" data-project-open="snaplogic">View Project</button>
+                            </div>
+                        </div>
+                    </article>
+
                     <article class="project-card fade-in" data-project="insect">
                         <img src="images/insect_ai.png" alt="Insect classifier project preview">
                         <div class="project-body">
-                            <h3>Multi Insect Classifier</h3>
+                            <h3>Multi-Class Insect Classifier</h3>
                             <p>
                                 Dissertation work turned into a public web app with Docker, AWS EC2 deployment, model
-                                switching, and a live prediction interface.
+                                switching, and a live prediction interface — 98.99% accuracy on field data.
                             </p>
                             <div class="tag-row">
                                 <span>TensorFlow</span><span>Flask</span><span>Docker</span><span>AWS EC2</span>
@@ -259,11 +337,11 @@
                         <div class="project-body">
                             <h3>Sensibee Ecological Monitor</h3>
                             <p>
-                                Research-driven detection pipeline for ecological monitoring using YOLOv11, focused on
-                                real-time, high-precision field use cases.
+                                DEFRA-regulated ecological monitoring contract with Pollinatework, using YOLOv11 for
+                                real-time, high-precision insect detection in the field.
                             </p>
                             <div class="tag-row">
-                                <span>YOLOv11</span><span>Computer Vision</span><span>MLOps</span>
+                                <span>YOLOv11</span><span>Computer Vision</span><span>DEFRA</span>
                             </div>
                             <div class="project-links">
                                 <button class="text-link" data-project-open="sensibee">View Project</button>
@@ -385,30 +463,6 @@
                 <div id="modalTags" class="tag-row tag-row-modal"></div>
                 <div id="modalDescription" class="modal-description"></div>
                 <div id="modalLinks" class="modal-links"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="overlay" id="resumeModal" aria-hidden="true">
-        <div class="modal-card modal-resume">
-            <button class="modal-close" type="button" data-close-resume aria-label="Close resume dialog">×</button>
-            <div class="modal-body">
-                <p class="modal-subtitle">Resume Selection</p>
-                <h3>Choose the version that matches the role.</h3>
-                <div class="resume-grid">
-                    <a class="resume-option" href="resume-da.pdf" target="_blank" rel="noreferrer">
-                        <strong>Data Analyst</strong>
-                        <span>Power BI, Tableau, SQL, business insights</span>
-                    </a>
-                    <a class="resume-option" href="resume-de.pdf" target="_blank" rel="noreferrer">
-                        <strong>Data Engineer</strong>
-                        <span>Warehousing, dbt, orchestration, pipelines</span>
-                    </a>
-                    <a class="resume-option" href="resume-mle.pdf" target="_blank" rel="noreferrer">
-                        <strong>ML Engineer</strong>
-                        <span>Computer vision, deployment, LLM systems</span>
-                    </a>
-                </div>
             </div>
         </div>
     </div>

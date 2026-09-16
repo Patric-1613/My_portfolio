@@ -1,12 +1,42 @@
 const projects = {
+    litreview: {
+        title: "AI Literature Review Agent",
+        subtitle: "GenAI Internship · FastAPI · LangGraph · React · ChromaDB",
+        placeholder: "brain-circuit",
+        tags: ["LangGraph", "LangChain", "RAG", "FastAPI", "React", "ChromaDB"],
+        description: [
+            "A multi-user research workspace that automates the search, ranking, and synthesis of academic literature into structured, cited reports, built with a stateful LangGraph agent behind a FastAPI backend and a React/TypeScript front end.",
+            "I benchmarked retrieval quality with RAGAS, reaching a 0.949 faithfulness score, and improved recall@10 nearly 4x through citation-partitioned reranking. I also red-teamed the system against prompt-injection and cost-abuse, adding multi-user auth, usage guardrails, and hybrid keyword/LLM filtering, with Langfuse wired in for live observability."
+        ]
+    },
+    aidigest: {
+        title: "AI Daily Digest Platform",
+        subtitle: "GenAI Internship · LangGraph · Pydantic · FastAPI · pgvector",
+        placeholder: "radar",
+        tags: ["LangGraph", "Pydantic", "FastAPI", "PostgreSQL", "pgvector", "CI/CD"],
+        description: [
+            "A stateful agentic platform that ingests official AI-provider announcements, version-snapshots them, and tracks automated delta changes over time so nothing important gets missed as the field moves.",
+            "I owned the ingestion pipeline, the PostgreSQL/pgvector foundation, and the daily ingestion-to-intelligence orchestrator as integration lead on a small team, while a custom LangGraph pipeline handled structured extraction, comparison, and citation checking with human-in-the-loop validation for unsupported claims. The service ships behind layered test coverage and automated GitHub Actions quality gates."
+        ]
+    },
+    snaplogic: {
+        title: "SnapLogic Estate Advisor",
+        subtitle: "GenAI Internship · AI Agent for Data Pipeline Intelligence",
+        placeholder: "network",
+        tags: ["Chat Agent", "Databricks", "Dependency Graphs", "Pattern Detection"],
+        description: [
+            "A chat-based agent, built under the mentorship of a senior data architect, that gives platform teams intelligent operational insight across a life-sciences estate of 500+ SnapLogic data pipelines, inspired by a real AstraZeneca engagement.",
+            "It scores pipeline reliability risk with a dependency graph and blast-radius impact model (failures × downstream dependents), and detects reusable pipeline templates to auto-generate contextual prompts for faster, pattern-consistent pipeline creation. The analysis stays deterministic, with AI kept to explaining results rather than driving them, and I presented the working prototype to platform stakeholders as part of a client-facing AI acceleration initiative."
+        ]
+    },
     insect: {
-        title: "Multi Insect Classifier",
+        title: "Multi-Class Insect Classifier",
         subtitle: "MSc Dissertation · Flask · TensorFlow · Docker · AWS EC2",
         image: "images/insect_ai.png",
         tags: ["TensorFlow", "Flask", "Docker", "AWS EC2", "Computer Vision", "MLOps"],
         description: [
-            "This started as my dissertation project, where I trained multiple insect classifiers in Keras to distinguish between eight visually similar species. I did not want it to remain another local-only model, so I turned it into a public product people can actually test.",
-            "The live version now includes a Flask API, a cleaner front end, Docker-based packaging, EC2 deployment, health checks, and model switching so visitors can compare predictions across architectures."
+            "This started as my dissertation project, where I trained multiple insect classifiers in Keras to distinguish between visually similar species using a GDPR-compliant dataset I built from scratch and balanced through selective augmentation rather than naive oversampling. I did not want it to remain another local-only model, so I turned it into a public product people can actually test.",
+            "The live version includes a Flask API, a cleaner front end, Docker-based packaging, EC2 deployment, health checks, and model switching, with hyperparameter tuning taking field-data accuracy to 98.99 percent."
         ],
         live: "http://16.171.241.135",
         github: "https://github.com/Patric-1613/MultiInsectClassifier"
@@ -53,12 +83,12 @@ const projects = {
     },
     sensibee: {
         title: "Sensibee Ecological Monitor",
-        subtitle: "Research Assistant Work · YOLOv11 · Ecological Monitoring",
+        subtitle: "Pollinatework · DEFRA-Regulated Research Contract · YOLOv11",
         image: "images/analytics_dashboard.png",
-        tags: ["YOLOv11", "Computer Vision", "Research", "Ecology"],
+        tags: ["YOLOv11", "Computer Vision", "DEFRA", "GDPR", "Ecology"],
         description: [
-            "This work sits inside my research role at Kingston University. The goal is real-time ecological monitoring using computer vision, with particular focus on reliable insect detection in field conditions.",
-            "The project achieved 95 percent mAP@50 and substantially reduced false detections, which matters because research value only appears when models behave consistently outside the lab."
+            "As ML Engineer on Pollinatework's Sensibee project, a DEFRA-regulated ecological monitoring contract, I worked with unstructured IoT field-camera and sensor data to build and deploy a series of YOLOv11 computer vision models for insect detection, with automated git pipelines behind them.",
+            "The project achieved 95 percent mAP@50 and substantially reduced false detections in field conditions. I also cleaned and standardised 10,000+ GDPR-compliant records and translated requirements between research, engineering, and commercial teams."
         ],
         github: "https://github.com/Patric-1613"
     },
@@ -85,7 +115,11 @@ function renderVisual(project) {
         return `<img src="${project.image}" alt="${project.title} visual">`;
     }
 
-    return `<div class="modal-placeholder">Preview available from the external project links.</div>`;
+    if (project.placeholder) {
+        return `<div class="project-thumb-placeholder"><i data-lucide="${project.placeholder}"></i></div>`;
+    }
+
+    return `<div class="modal-placeholder">Internal project — details in the description.</div>`;
 }
 
 function renderLinks(project) {
@@ -115,6 +149,7 @@ function openProjectModal(key) {
         .map((paragraph) => `<p>${paragraph}</p>`)
         .join("");
     document.getElementById("modalLinks").innerHTML = renderLinks(project);
+    lucide.createIcons();
 
     document.getElementById("projectModal").classList.add("open");
     document.body.style.overflow = "hidden";
@@ -122,17 +157,6 @@ function openProjectModal(key) {
 
 function closeProjectModal() {
     document.getElementById("projectModal").classList.remove("open");
-    document.body.style.overflow = "";
-}
-
-function openResumeModal(event) {
-    event.preventDefault();
-    document.getElementById("resumeModal").classList.add("open");
-    document.body.style.overflow = "hidden";
-}
-
-function closeResumeModal() {
-    document.getElementById("resumeModal").classList.remove("open");
     document.body.style.overflow = "";
 }
 
@@ -172,29 +196,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    document.querySelectorAll("[data-open-resume]").forEach((trigger) => {
-        trigger.addEventListener("click", openResumeModal);
-    });
-
     document.querySelectorAll("[data-close-project]").forEach((button) => {
         button.addEventListener("click", closeProjectModal);
-    });
-
-    document.querySelectorAll("[data-close-resume]").forEach((button) => {
-        button.addEventListener("click", closeResumeModal);
     });
 
     document.getElementById("projectModal").addEventListener("click", (event) => {
         if (event.target.id === "projectModal") closeProjectModal();
     });
 
-    document.getElementById("resumeModal").addEventListener("click", (event) => {
-        if (event.target.id === "resumeModal") closeResumeModal();
-    });
-
     document.addEventListener("keydown", (event) => {
         if (event.key !== "Escape") return;
         closeProjectModal();
-        closeResumeModal();
     });
 });
